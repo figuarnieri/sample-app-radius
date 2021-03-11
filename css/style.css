@@ -1,0 +1,158 @@
+:root {
+  --item-padding-y: 16px;
+  --item-border-radius: 24px;
+}
+.item {
+  padding: var(--item-padding-y) var(--item-border-radius)
+    calc(var(--item-padding-y) + var(--item-border-radius));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.item + .item {
+  margin-top: calc(var(--item-border-radius) * -1);
+  border-radius: var(--item-border-radius) 0 0;
+}
+.item + .item:before,
+.item:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: var(--item-border-radius);
+  width: var(--item-border-radius);
+  background-color: inherit;
+}
+.item + .item:before {
+  bottom: 100%;
+  z-index: 1;
+}
+.item:after {
+  bottom: var(--item-border-radius);
+  border-radius: 0 0 var(--item-border-radius);
+  z-index: 2;
+}
+.item:first-child {
+  border-top-left-radius: var(--item-border-radius);
+  border-top-right-radius: var(--item-border-radius);
+}
+.item:last-child {
+  border-bottom-left-radius: var(--item-border-radius);
+  border-bottom-right-radius: var(--item-border-radius);
+}
+
+/* UI */
+@keyframes item-1 {
+  0% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #555;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+@keyframes item-2 {
+  0% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #555;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+@keyframes item-3 {
+  0% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #555;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+@keyframes item-4 {
+  0% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #555;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+@keyframes item-5 {
+  0% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #555;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+@keyframes item-6 {
+  0% {
+    background-color: #000;
+  }
+  50% {
+    background-color: #555;
+  }
+  100% {
+    background-color: #000;
+  }
+}
+
+.item {
+  color: #fff;
+}
+.item--1 {
+  background-color: #000;
+  min-height: 200px;
+  animation: item-1 5s infinite;
+}
+.item--2 {
+  background-color: #000;
+  animation: item-2 5s 0.3s infinite;
+}
+.item--3 {
+  background-color: #000;
+  animation: item-3 5s 0.6s infinite;
+}
+.item--4 {
+  background-color: #000;
+  animation: item-4 5s 0.9s infinite;
+}
+.item--5 {
+  background-color: #000;
+  animation: item-5 5s 1.2s infinite;
+}
+.item--6 {
+  background-color: #000;
+  animation: item-6 5s 1.5s infinite;
+}
+
+.item__info {
+  display: flex;
+  align-items: center;
+}
+.item__icon {
+  width: 72px;
+  position: relative;
+  z-index: 4;
+}
+.item__descript {
+  margin-left: 24px;
+}
+.item__date {
+  font-size: 12px;
+}
+.item__name {
+  font-weight: bold;
+}

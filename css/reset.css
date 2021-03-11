@@ -1,0 +1,43 @@
+@keyframes wrapper {
+  0% {
+    max-width: 280px;
+  }
+  30% {
+    max-width: 280px;
+  }
+  40% {
+    max-width: 1200px;
+  }
+  50% {
+    max-width: 1200px;
+  }
+  60% {
+    max-width: 480px;
+  }
+  70% {
+    max-width: 480px;
+  }
+  80% {
+    max-width: 800px;
+  }
+  90% {
+    max-width: 800px;
+  }
+  100% {
+    max-width: 280px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 0 10px #0006;
+  border-radius: var(--item-border-radius);
+  margin: 24px auto;
+  font: 16px/1em Arial;
+  animation: wrapper 8s infinite;
+}
